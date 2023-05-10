@@ -5,7 +5,7 @@ A secure and efficient solution for uploading and exfiltrating files using PHP.
 1. Host the "upload.php" file on your server.
 
 ```
-php -S 127.0.0.1:8080 -t .
+php -S <server_ip>:8080 -t .
 ```
 2. Create the "upload" directory and configure its settings.
 
